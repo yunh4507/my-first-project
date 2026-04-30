@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>Hee의 첫 바이브 프로젝트</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤희원 | 자기소개</title>
+    <style>
+        /* 하양색 메인의 미니멀 디자인 */
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-family: 'Noto Sans KR', -apple-system, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 90%;
+            padding: 40px;
+            border: 1px solid #f0f0f0; /* 아주 연한 테두리로 정돈된 느낌 */
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: -0.02em;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 0.85rem;
+            color: #888;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .content {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .greeting {
+            margin-top: 40px;
+            font-weight: 500;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>성공입니다! 🏃🏻</h1>
-    <p>Hee의 바이브 코딩이 시작되었습니다.</p>
+    <div class="container">
+        <h1>윤희원</h1>
+        
+        <div class="info-item">
+            <span class="label">별명</span>
+            <span class="content">hee, 훤</span>
+        </div>
+
+        <div class="info-item">
+            <span class="label">좋아하는 것</span>
+            <span class="content">하양색을 좋아합니다. 아주 많이.</span>
+        </div>
+
+        <div class="info-item">
+            <span class="label">되새기고자 하는 것</span>
+            <span class="content">확신 있는 사람이 되자. 모든 길에는 의미가 있다.</span>
+        </div>
+
+        <div class="info-item">
+            <span class="label">갖고 싶은 것</span>
+            <span class="content">여유</span>
+        </div>
+
+        <div class="info-item greeting">
+            <span class="content">안녕하세요. 윤희원입니다.<br>잘 부탁드립니다.</span>
+        </div>
+    </div>
 </body>
 </html>
