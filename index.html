@@ -15,6 +15,7 @@
     html,
     body {
       margin: 0;
+      padding: 0;
       width: 100%;
       min-height: 100%;
       font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -26,8 +27,8 @@
       background-color: #111111;
       background-image:
         linear-gradient(
-          rgba(0, 0, 0, 0.22),
-          rgba(0, 0, 0, 0.48)
+          rgba(0, 0, 0, 0.20),
+          rgba(0, 0, 0, 0.42)
         ),
         url("./background.jpg");
       background-size: cover;
@@ -39,73 +40,75 @@
       position: relative;
       width: 100%;
       min-height: 100vh;
-      padding: 48px;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 52px 72px;
       overflow: hidden;
     }
 
     .logo {
       position: absolute;
-      top: 18px;
-      left: 44px;
+      top: 30px;
+      left: 56px;
       z-index: 2;
-      font-size: clamp(8rem, 19vw, 18rem);
+      margin: 0;
+      font-size: clamp(6.5rem, 14vw, 13rem);
       font-weight: 900;
-      line-height: 0.78;
-      letter-spacing: -0.1em;
+      line-height: 0.8;
+      letter-spacing: -0.09em;
       color: rgba(255, 255, 255, 0.97);
-      text-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+      text-shadow: 0 16px 42px rgba(0, 0, 0, 0.20);
     }
 
     .top-image {
       position: absolute;
-      top: 48px;
-      right: 48px;
+      top: 52px;
+      right: 56px;
       z-index: 3;
-      width: 190px;
-      height: 190px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 24px;
       border: 1px solid rgba(255, 255, 255, 0.38);
-      background: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+      background: rgba(255, 255, 255, 0.10);
+      box-shadow: 0 20px 56px rgba(0, 0, 0, 0.24);
     }
 
     .bottom-area {
       position: absolute;
-      left: 48px;
-      right: 48px;
-      bottom: 48px;
+      left: 56px;
+      right: 56px;
+      bottom: 52px;
       z-index: 2;
-
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      gap: 56px;
+      gap: 44px;
     }
 
     .info-box {
-      width: 560px;
-      max-width: 52vw;
-      padding: 34px 40px;
+      width: 540px;
+      max-width: 50%;
+      padding: 32px 38px;
       border-radius: 26px;
       border: 1px solid rgba(255, 255, 255, 0.34);
       background: rgba(255, 255, 255, 0.13);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.27);
+      box-shadow: 0 22px 64px rgba(0, 0, 0, 0.24);
     }
 
     .name {
-      margin: 0 0 30px;
-      font-size: 2.1rem;
-      font-weight: 750;
+      margin: 0 0 28px;
+      font-size: 2rem;
+      font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.04em;
       color: rgba(255, 255, 255, 0.98);
     }
 
     .info-section {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .info-section:last-child {
@@ -123,46 +126,84 @@
     }
 
     .content {
-      font-size: 1.03rem;
+      font-size: 1.02rem;
       font-weight: 400;
-      line-height: 1.75;
+      line-height: 1.72;
       letter-spacing: -0.02em;
       color: rgba(255, 255, 255, 0.96);
       word-break: keep-all;
     }
 
     .message {
-      max-width: 680px;
+      max-width: 480px;
       margin: 0;
       font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-      font-size: clamp(2.8rem, 5.5vw, 5.8rem);
+      font-size: clamp(2rem, 3.8vw, 4rem);
       font-style: normal;
-      font-weight: 800;
-      line-height: 1.06;
-      letter-spacing: -0.07em;
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: -0.05em;
       text-align: right;
       color: rgba(255, 255, 255, 0.97);
-      text-shadow: 0 16px 48px rgba(0, 0, 0, 0.34);
+      text-shadow: 0 14px 40px rgba(0, 0, 0, 0.30);
       word-break: keep-all;
+    }
+
+    @media (max-width: 1100px) {
+      .page {
+        padding: 44px 40px;
+      }
+
+      .logo {
+        left: 40px;
+        top: 26px;
+        font-size: clamp(6rem, 13vw, 10rem);
+      }
+
+      .top-image {
+        top: 44px;
+        right: 40px;
+        width: 150px;
+        height: 150px;
+      }
+
+      .bottom-area {
+        left: 40px;
+        right: 40px;
+        bottom: 44px;
+        gap: 28px;
+      }
+
+      .info-box {
+        width: 500px;
+        max-width: 55%;
+      }
+
+      .message {
+        max-width: 390px;
+        font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+      }
     }
 
     @media (max-width: 900px) {
       .page {
         padding: 28px;
+        max-width: none;
         overflow: visible;
       }
 
       .logo {
+        position: absolute;
         top: 24px;
         left: 28px;
-        font-size: 7.4rem;
+        font-size: 6rem;
       }
 
       .top-image {
         top: 28px;
         right: 28px;
-        width: 104px;
-        height: 104px;
+        width: 100px;
+        height: 100px;
         border-radius: 18px;
       }
 
@@ -172,23 +213,24 @@
         right: auto;
         bottom: auto;
         min-height: 100vh;
-        padding-top: 250px;
+        padding-top: 220px;
+        display: flex;
         flex-direction: column-reverse;
         align-items: stretch;
         justify-content: flex-end;
-        gap: 28px;
+        gap: 24px;
       }
 
       .info-box {
         width: 100%;
         max-width: none;
-        padding: 28px;
+        padding: 26px;
       }
 
       .message {
         max-width: 100%;
         text-align: left;
-        font-size: 3.2rem;
+        font-size: 2.4rem;
       }
     }
   </style>
@@ -196,13 +238,13 @@
 
 <body>
   <main class="page">
-    <div class="logo">HEE</div>
+    <h1 class="logo">HEE</h1>
 
     <img class="top-image" src="./top-image.jpg" alt="오른쪽 상단 이미지" />
 
     <section class="bottom-area">
       <div class="info-box">
-        <h1 class="name">윤희원</h1>
+        <h2 class="name">윤희원</h2>
 
         <div class="info-section">
           <span class="label">Nickname</span>
